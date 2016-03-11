@@ -32,6 +32,7 @@ public class EBayTest {
 
     @Test(description = "eBay smoke test")
     public void eBayTest() {
+
         StartPage startPage = new StartPage(driver);
         startPage.openPage(URL);
         LoginPage loginPage = startPage.singIn();
@@ -60,6 +61,7 @@ public class EBayTest {
 //        Assert.assertTrue(productPage.getPageTitle().toUpperCase().contains("TAC FORCE ")
 //                , "The product page is not opened");
 
+        productPage.takeScreenShot(driver);
         Product product = productPage.getProductDetails();
         System.out.println(product.getName());
         System.out.println(product.getCost());

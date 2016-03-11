@@ -32,6 +32,7 @@ public class ProductPage extends Page {
         PageFactory.initElements((WebDriver) getDriver(), this);
     }
 
+
     public Product getProductDetails() {
         Product product = new Product();
         product.setName(this.productName.getText());
